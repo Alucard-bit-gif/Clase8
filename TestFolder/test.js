@@ -14,6 +14,8 @@ const precioA = 5000;
 const precioB = 4000;
 const precioC = 3000;
 const precioD = 2000;
+let Moto = true;
+let Carro = true;
 let valorA;
 let valorB;
 let valorC;
