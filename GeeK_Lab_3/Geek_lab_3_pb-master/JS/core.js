@@ -8,8 +8,8 @@
 
 //Declarar Variables
 
-let horasParqueo;
 let  tipoVeh;
+let horasParqueo;
 const precioA = 5000;
 const precioB = 4000;
 const precioC = 3000;
