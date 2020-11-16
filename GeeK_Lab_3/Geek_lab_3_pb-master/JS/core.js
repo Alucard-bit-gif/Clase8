@@ -53,7 +53,6 @@ function Calcular ()
     function parkPago()
 
     {
-    
         if (tipoVeh == Moto)
             { 
                 if(horasParqueo<=2)
@@ -61,30 +60,27 @@ function Calcular ()
                         valorA= horasParqueo*precioA;
                         descM = parseInt(valorA * descMoto);
                         totalPago= valorA - descM; 
-                        return totalPago;                                                 
                     } 
 
-                else if (horasParqueo>2<=5)
+                else if (horasParqueo<=5)
                     {
                         valorB= (precioA*2) + ((horasParqueo - 2)*precioB);
                         descM = parseInt(valorB*descMoto);
                         totalPago = valorB - descM;
-                        return totalPago;                    
+                                            
                     }
 
-                else if (horasParqueo>5<=10)
+                else if (horasParqueo<=10)
                     {
                         valorC= (precioA*2) + (precioB*3) + ((horasParqueo - 5)*precioC);
                         descM = parseInt(valorC*descMoto);
-                        totalPago = valorC - descM;
-                        return totalPago;
+                        totalPago = valorC - descM;                        
                     }
                 else   
                     {
                         valorD = (precioA*2) + (precioB*3) + (precioC*5) + ((horasParqueo - 10)*precioD);
                         descM = parseInt(valorD*descMoto);
                         totalPago = valorD - descM;
-                        return totalPago;
                     }
             }
 
@@ -99,7 +95,7 @@ function Calcular ()
                         return totalPago;                                                 
                     } 
 
-                else if (horasParqueo>2<=5)
+                else if (horasParqueo<=5)
                     {
                         valorB= (precioA*2) + ((horasParqueo - 2)*precioB);
                         descA = parseInt(valorB*descAuto);
@@ -107,7 +103,7 @@ function Calcular ()
                         return totalPago;                    
                     }
 
-                else if (horasParqueo>5<=10)
+                else if (horasParqueo<=10)
                     {
                         valorC= (precioA*2) + (precioB*3) + ((horasParqueo - 5)*precioC);
                         descA = parseInt(valorC*descAuto);
