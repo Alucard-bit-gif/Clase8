@@ -38,8 +38,12 @@ function Calcular (){
     totalPago = parkPago(horasParqueo);
 
     //Imprimir
-
-    
+    document.getElementById('Inicial').value = valorA;
+    document.getElementById('Inicial').value = valorB;
+    document.getElementById('Inicial').value = valorC;
+    document.getElementById('Descuento').value = descM;
+    document.getElementById('Descuento').value = descA;
+    document.getElementById('Total').value = totalPago;
     
 }
 
@@ -47,12 +51,12 @@ function Calcular (){
 
     function parkPago(horasParqueo)
     { 
-        if(motoX == moto)
+        if(motoX == Moto)
             { 
                 if(horasParqueo<=2)
                     {
                         valorA= horasParqueo*precioA;
-                        descM = valorA * descMoto;
+                        descM = parseInt(valorA * descMoto);
                         totalPago= valorA - descM; 
                         return totalPago;                                                 
                     } 
@@ -60,7 +64,7 @@ function Calcular (){
                 else if (horasParqueo>2<=5)
                     {
                         valorB= (precioA*2) + ((horasParqueo - 2)*precioB);
-                        descM = valorB*descMoto;
+                        descM = parseInt(valorB*descMoto);
                         totalPago = valorB - descM;
                         return totalPago;                    
                     }
@@ -68,14 +72,14 @@ function Calcular (){
                 else if (horasParqueo>5<=10)
                     {
                         valorC= (precioA*2) + (precioB*3) + ((horasParqueo - 5)*precioC);
-                        descM = valorC*descMoto;
+                        descM = parseInt(valorC*descMoto);
                         totalPago = valorC - descM;
                         return totalPago;
                     }
                 else   
                     {
                         valorD = (precioA*2) + (precioB*3) + (precioC*5) + ((horasParqueo - 10)*precioD);
-                        descM = valorD*descMoto;
+                        descM = parseInt(valorD*descMoto);
                         totalPago = valorD - descM;
                         return totalPago;
                     }  
@@ -85,7 +89,7 @@ function Calcular (){
                 if(horasParqueo<=2)
                     {
                         valorA= horasParqueo*precioA;
-                        descA = valorA * descAuto;
+                        descA = parseInt(valorA * descAuto);
                         totalPago= valorA - descA; 
                         return totalPago;                                                 
                     } 
@@ -93,7 +97,7 @@ function Calcular (){
                 else if (horasParqueo>2<=5)
                     {
                         valorB= (precioA*2) + ((horasParqueo - 2)*precioB);
-                        descA = valorB*descAuto;
+                        descA = parseInt(valorB*descAuto);
                         totalPago = valorB - descA;
                         return totalPago;                    
                     }
@@ -101,14 +105,14 @@ function Calcular (){
                 else if (horasParqueo>5<=10)
                     {
                         valorC= (precioA*2) + (precioB*3) + ((horasParqueo - 5)*precioC);
-                        descA = valorC*descAuto;
+                        descA = parseInt(valorC*descAuto);
                         totalPago = valorC - descA;
                         return totalPago;
                     }
                 else   
                     {
                         valorD = (precioA*2) + (precioB*3) + (precioC*5) + ((horasParqueo - 10)*precioD);
-                        descA = valorD*descAuto;
+                        descA = parseInt(valorD*descAuto);
                         totalPago = valorD - descA;
                         return totalPago;
                     }
