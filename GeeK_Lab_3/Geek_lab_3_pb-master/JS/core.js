@@ -1,4 +1,6 @@
-alert("Programar el calculo del servicio")
+'use strict'
+
+//alert("Programar el calculo del servicio")
 
 //Laboratorio Geek # 3//
 
@@ -7,8 +9,7 @@ alert("Programar el calculo del servicio")
 //Declarar Variables
 
 let horasParqueo;
-let motoX;
-let carroY;
+let  tipoVeh =  Moto;
 const precioA = 5000;
 const precioB = 4000;
 const precioC = 3000;
@@ -23,19 +24,19 @@ let descA;
 let descM;
 let totalPago;
 
-function Calcular (){
+function Calcular ()
+    {
 
     //Leer variables
 
     //Ingresa tipo de vehiculo
-    motoX = document.getElementById('tipo').value;
-    carroY =  document.getElementById('tipo').value;
+    tipoVeh = document.getElementById('tipo').value;
 
     //Ingresar numero de horas
     horasParqueo = Number(document.getElementById('salida').value);
 
     //Invocar funcion
-    totalPago = parkPago(horasParqueo);
+    totalPago = parkPago();
 
     //Imprimir
     document.getElementById('Inicial').value = valorA;
@@ -45,13 +46,15 @@ function Calcular (){
     document.getElementById('Descuento').value = descA;
     document.getElementById('Total').value = totalPago;
     
-}
+    }
 
     //Procedimiento
 
-    function parkPago(horasParqueo)
-    { 
-        if(motoX == Moto)
+    function parkPago()
+
+    {
+    
+        if (tipoVeh == Moto)
             { 
                 if(horasParqueo<=2)
                     {
@@ -82,11 +85,13 @@ function Calcular (){
                         descM = parseInt(valorD*descMoto);
                         totalPago = valorD - descM;
                         return totalPago;
-                    }  
-                }
-        else 
+                    }
+            }
+
+        else       
+         
             {
-                if(horasParqueo<=2)
+               if(horasParqueo<=2)
                     {
                         valorA= horasParqueo*precioA;
                         descA = parseInt(valorA * descAuto);
@@ -118,8 +123,5 @@ function Calcular (){
                     }
     
             }
-            
-            
-
-
-        }
+    
+    }
