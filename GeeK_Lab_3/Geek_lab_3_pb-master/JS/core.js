@@ -36,11 +36,11 @@ function Calcular ()
     horasParqueo = Number(document.getElementById('salida').value);
 
     //Invocar funcion
-    totalPago = parkPago();
+    totalPago = parkPago(horasParqueo);
 
     //Imprimir
-    document.getElementById('Inicial').value = valorA;
-    document.getElementById('Inicial').value = valorB;
+    
+    
     document.getElementById('Inicial').value = valorC;
     document.getElementById('Descuento').value = descM;
     document.getElementById('Descuento').value = descA;
@@ -50,7 +50,7 @@ function Calcular ()
 
     //Procedimiento
 
-    function parkPago()
+    function parkPago(horasParqueo)
 
     {
         if (tipoVeh == Moto)
@@ -60,6 +60,7 @@ function Calcular ()
                         valorA= horasParqueo*precioA;
                         descM = parseInt(valorA * descMoto);
                         totalPago= valorA - descM; 
+                        document.getElementById('Inicial').value = valorA;
                     } 
 
                 else if (horasParqueo<=5)
@@ -67,6 +68,7 @@ function Calcular ()
                         valorB= (precioA*2) + ((horasParqueo - 2)*precioB);
                         descM = parseInt(valorB*descMoto);
                         totalPago = valorB - descM;
+                        document.getElementById('Inicial').value = valorB;
                                             
                     }
 
@@ -74,13 +76,15 @@ function Calcular ()
                     {
                         valorC= (precioA*2) + (precioB*3) + ((horasParqueo - 5)*precioC);
                         descM = parseInt(valorC*descMoto);
-                        totalPago = valorC - descM;                        
+                        totalPago = valorC - descM;
+                        document.getElementById('Inicial').value = valorC;                        
                     }
                 else   
                     {
                         valorD = (precioA*2) + (precioB*3) + (precioC*5) + ((horasParqueo - 10)*precioD);
                         descM = parseInt(valorD*descMoto);
                         totalPago = valorD - descM;
+                        document.getElementById('Inicial').value = valorD;
                     }
             }
 
