@@ -9,7 +9,7 @@
 //Declarar Variables
 
 let horasParqueo;
-let  tipoVeh =  Moto;
+let  tipoVeh;
 const precioA = 5000;
 const precioB = 4000;
 const precioC = 3000;
@@ -24,7 +24,7 @@ let descA;
 let descM;
 let totalPago;
 
-function Calcular ()
+function Calcular()
     {
 
     //Leer variables
