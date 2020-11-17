@@ -81,13 +81,37 @@ function Calcular()
 
         }
     else 
-        {
-        valorInicial = parseInt(horasParqueo*precioA);
-        valorDescuento = valorInicial*porcentDescA;
+        { 
+        if (horasParqueo <= 2) {   
+        valorInicial = (horasParqueo*precioA);
+        valorDescuento = valorInicial*porcentDescB;
         totalaPagar = valorInicial - valorDescuento;
-        alert('El valor a pagar es:' + ' '  +  totalaPagar);  
-        return totalaPagar; 
-        }    
+        alert('El valor a pagar es:' + ' '  +  totalaPagar);
+        return totalaPagar;
+                                }
+        else if (horasParqueo <= 5){
+        valorInicial = (precioA*2) + ((horasParqueo - 2)*precioB);
+        valorDescuento = valorInicial*porcentDescB;
+        totalaPagar = valorInicial-valorDescuento;
+        alert('El valor a pagar es:' + ' '  +  totalaPagar);
+        return totalaPagar
+                                }
+        else if (horasParqueo <=10){
+        valorInicial = (precioA*2) + (precioB*3) + ((horasParqueo - 5)*precioC);
+        valorDescuento = valorInicial*porcentDescB;
+        totalaPagar = valorInicial-valorDescuento;
+        alert('El valor a pagar es:' + ' '  +  totalaPagar);
+        return totalaPagar
+                                }                        
+        else {
+        valorInicial = (precioA*2) + (precioB*3) + (precioC*5) + ((horasParqueo - 10)*precioD);
+        valorDescuento = valorInicial*porcentDescB;
+        totalaPagar = valorInicial-valorDescuento;
+        alert('El valor a pagar es:' + ' '  +  totalaPagar);
+        return totalaPagar
+             } 
+
+        }   
     }
         
    
