@@ -50,17 +50,29 @@ function Calcular()
       
     if(tipoVehiculo == 'Carro')  
         { 
-        if (horasParqueo <= 10) {   
-        valorInicial = (horasParqueo*precioB);
-        valorDescuento = valorInicial*porcentDescB;
+        if (horasParqueo <= 2) {   
+        valorInicial = (horasParqueo*precioA);
+        valorDescuento = valorInicial*porcentDescA;
         totalaPagar = valorInicial - valorDescuento;
         alert('El valor a pagar es:' + ' '  +  totalaPagar);
         return totalaPagar;
                                 }
-        else
-                                {
-            alert('error');
+        else if (horasParqueo <= 5){
+        valorInicial = (precioA*2) + ((horasParqueo - 2)*precioB);
+        valorDescuento = valorInicial*porcentDescA;
+        totalaPagar = valorInicial-valorDescuento;
+        alert('El valor a pagar es:' + ' '  +  totalaPagar);
+        return totalaPagar
                                 }
+        else if (horasParqueo <=10){
+        valorInicial = (precioA*2) + (precioB*3) + ((horasParqueo - 5)*precioC);
+        valorDescuento = valorInicial*porcentDescA;
+        totalaPagar = valorInicial-valorDescuento;
+        alert('El valor a pagar es:' + ' '  +  totalaPagar);
+        return totalaPagar
+                                }                        
+
+
         }
     else 
         {
