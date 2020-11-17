@@ -71,7 +71,13 @@ function Calcular()
         alert('El valor a pagar es:' + ' '  +  totalaPagar);
         return totalaPagar
                                 }                        
-
+        else {
+        valorInicial = (precioA*2) + (precioB*3) + (precioC*5) + ((horasParqueo - 10)*precioD);
+        valorDescuento = valorInicial*porcentDescA;
+        totalaPagar = valorInicial-valorDescuento;
+        alert('El valor a pagar es:' + ' '  +  totalaPagar);
+        return totalaPagar
+             } 
 
         }
     else 
