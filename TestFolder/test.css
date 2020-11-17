@@ -67,7 +67,7 @@ body::before {
   }
   .btnmaster{
       margin-top: 100px;
-      margin-left: 550px;
+      margin-left: 650px;
   }
 
   .col4{
@@ -78,6 +78,7 @@ body::before {
   .colz{
       margin-left: 570px;
       margin-top: -70px;
+      
   }
 
   #entryDate {
@@ -85,6 +86,18 @@ body::before {
   }
 
   #inicioZ{
-      width: 100em;
+      width: 60px;
       margin-right: 400px;
+      
   }
+  .parktime{
+      margin-left: 800px;
+      margin-top: -55px;
+}
+
+.rowPark
+{
+    color:black;
+    font-size: 20px;
+}
+
