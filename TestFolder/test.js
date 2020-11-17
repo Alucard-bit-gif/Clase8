@@ -12,6 +12,7 @@ let valorDescuento;
 let totalaPagar;
 let precioA = 2000;
 let precioB = 5000;
+let standarHoras = 10;
 
 
 
@@ -43,16 +44,31 @@ function Calcular()
 
    
 
-   function pagoParqueo()
-   
+   function pagoParqueo(){
+      
+    if(tipoVehiculo == 'Carro')  
         { 
+        if (standarHoras == 10) {   
         valorInicial = (horasParqueo*precioB);
         valorDescuento = valorInicial*porcentDescB;
         totalaPagar = valorInicial - valorDescuento;
-        alert('El valor a pagar es:' + totalaPagar)
+        alert('El valor a pagar es:' + ' '  +  totalaPagar);
         return totalaPagar;
+                                }
+        else
+                                {
+            alert('error');
+                                }
         }
-        
+    else 
+        {
+        valorInicial = parseInt(horasParqueo*precioA);
+        valorDescuento = valorInicial*porcentDescA;
+        totalaPagar = valorInicial - valorDescuento;
+        alert('El valor a pagar es:' + ' '  +  totalaPagar);  
+        return totalaPagar; 
+        }    
+    }
         
    
 
