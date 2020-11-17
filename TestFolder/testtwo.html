@@ -8,21 +8,61 @@
     <title>AutoPark</title>
 </head>
 <body>
+    <header class="shadow">
+        <div class="header-content d-flex justify-content-center p-2">
+            <div id="header-msg" class="ml-5 align-self-center"> Sistema Parqueadero Geek </div>            
+        </div>
+    </header>
+    <div class="form-container mt-5"><!--hace bloques de código -->
+        <form class="w-50 mx-auto" id="entryForm">            
+            <div class="form-group font-weight">
+                <label for="Propietario"><strong>Propietario del vehículo:</strong> </label>
+                <input type="text" class="form-control rounded-0 shadow-sm" id="Propietario" placeholder="Propietario del vehículo">
+            </div>
+           
+            <div class="form-group font-weight">
+                <label for="Propietario"><strong>Modelo del vehículo:</strong> </label>
+                <input type="text" class="form-control rounded-0 shadow-sm" id="Modelo" placeholder="Modelo del vehículo">
+            </div>
+
+            <div class="col-6">
+                <label for="Placa"><strong>Placa</strong></label>
+                <input type="text" class="form-control rounded-0 shadow-sm" id="Placa" placeholder="NN-NN-LL">
+            </div>
+        </form>
+    </div>   
+    <br>
+    <br>
     <div class="rowzero"><!--hace bloques de código -->
         <form action="" id="vehiculo">            
                 <div class="motocar">
-                    <label for="tipo"><strong>Seleccione el Tipo vehículo</strong></label>
+                    <label for="tipo"><strong>Seleccione el Tipo vehículo</strong></label><br>
                     <select id= "carro_moto">
                         <option value="">--Haga una selección</option>
                         <option value="Carro">Carro</option>
                         <option value="Moto">Moto</option>
                     </select>
                 </div>
+                <br>
+                <div class="col4">
+                        <label for="entryDate"><strong>Fecha de Entrada:</strong></label>
+                        <br>
+                        <input type="date" class="form-control rounded-0 shadow-sm" id="entryDate" >
+                </div>
+                <div class="colz">
+                        <label for="incio"><strong>Hora de inicio </strong></label>
+                        <br>
+                        <input type="datetime" class="form-control rounded-0 shadow-sm" id="incioZ" placeholder="hh:mm">
+                </div>
                 <div class="parktime">
                     <label for="tipo"><strong>Numero Horas</strong></label>
+                    <br>
                     <input type="text" id="time">
                 </div>
+                <br>
+                <div class = "btnmaster">
                 <button id="btnOne" type="button" class= "btn btn-success"  onclick="Calcular()"> Calcular</button>
+                </div>
         </form>
     </div>
 
