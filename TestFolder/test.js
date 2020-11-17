@@ -10,9 +10,11 @@ let porcentDescA = 0.10;
 let porcentDescB = 0.15;
 let valorDescuento;
 let totalaPagar;
-let precioA = 2000;
-let precioB = 5000;
-let standarHoras = 10;
+let precioA = 5000;
+let precioB = 4000;
+let precioC = 3000;
+let precioD = 2000;
+
 
 
 
@@ -48,7 +50,7 @@ function Calcular()
       
     if(tipoVehiculo == 'Carro')  
         { 
-        if (standarHoras == 10) {   
+        if (horasParqueo <= 10) {   
         valorInicial = (horasParqueo*precioB);
         valorDescuento = valorInicial*porcentDescB;
         totalaPagar = valorInicial - valorDescuento;
